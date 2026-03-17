@@ -3,8 +3,8 @@ version: '3.8'
 services:
   2fa-service:
     build: .
-    image: 2fa-lite:latest
-    container_name: 2fa-lite-app
+    image: 2FA-lite:latest
+    container_name: 2FA-lite-app
     ports:
       - "5010:5000"
     restart: unless-stopped
