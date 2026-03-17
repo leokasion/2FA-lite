@@ -1,6 +1,8 @@
 # 2FA-Lite
 A stateless, high-performance TOTP microservice. Built with Python and Alpine Linux for a **minimal footprint and memory-only QR generation** that you can implement for two factor authentication in your project fast and easy.
 
+[![Docker Push](https://github.com/leokasion/2FA-Lite/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/leokasion/2FA-Lite/actions)
+
 ![2FA-Lite Preview](preview.png)
 
 ## Overview
