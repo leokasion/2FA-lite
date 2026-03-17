@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  2fa-service:
+    build: .
+    image: 2fa-lite:latest
+    container_name: 2fa-lite-app
+    ports:
+      - "5010:5000"
+    restart: unless-stopped
+    # Lite resource limits - good for shared servers
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:5000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
